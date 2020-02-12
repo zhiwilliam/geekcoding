@@ -34,11 +34,11 @@ Output:
 ]
 ```
 # Analysis
-I think this is the easiest medium difficualt question on Leetcode. To solve this question, the train of thought is very intruitive, targeting the rows and the columns which should be set to 0 and set them. 
+I think this is the easiest medium difficulty question on Leetcode. The train of thought is very natural, targeting the rows and the columns, which should be set to 0 and set them. 
 
-I have two solutions for this question. The first one is the intruitive solution which jumps to my mind at the fist time when I saw this question. This solution is not the most efficient one, but it is very easy to understand. And the second solution is the space effective one.
-## 1. Intruitive solution
-In this solution, I need to scan the matrix two times. The rows and collumns which should be set to 0 are found in the first scan. I use two sets to store the row numbers and the collumn numbers. Once we locate the rows and the columns which should be 0, we can start the second scan and set the rows and columns which is in the row or column sets to 0 in place.
+I have two solutions to this question. The first one is the intuitive  solution, which jumps to my mind the first time when I saw this question. This solution is not the most efficient one, but it is straightforward to understand. And the second solution is the space effective one.
+## 1. intuitive solution
+In this solution, I need to scan the matrix two times. The rows and columns which should be set to 0 are found in the first scan. I use two sets to store the row numbers and the column numbers. Once we locate the rows and the columns, which should be 0, we can start the second scan and set the rows and columns, which is in the row or column sets to 0 in place.
 ### The first scan
 ```python
 zeros = [(row_idx, col_idx) 
@@ -59,9 +59,9 @@ Then the return value of the first scan is:
 ```python
 [(0, 0), (0, 3)]
 ```
-There is an edge case, there is not 0-element in the original matrix. In this scenario, we don't have to do anything but return. 
+There is an edge case, which is there is not 0-element in the original matrix. In this scenario, we don't have to do anything but return. 
 
-After getting this list of tuples, we can make the sets for the rows and columns which should be set to 0.
+After getting this list of tuples, we can make the sets for the rows and columns, which should be set to 0.
 ```python
 if not zeros:
     return
@@ -77,6 +77,6 @@ for i in range(len(matrix)):
 
 ### *Time Complexity and Space Complexity analysis
 1. TC
-   <br>We go through the matrix 2 laps. Then the TC is: <span style="color:pink">***O(mn)***</span>
+   <br>We go through the matrix two laps. Then the TC is: <span style="color:pink">***O(mn)***</span>
 2. SC
    <br>In the first scan, I used a List Comprehension. And the worst case is the matrix is an all 0 matrix. So, the space complexity is <span style="color:pink">***O(mn)***</span>
