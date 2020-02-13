@@ -15,7 +15,9 @@ HashMap记录，检查，更新左右长度
 # 解题思路
 这题的解法很巧，我估计当场想不出来
 
-Using a map to save each number's array length. Only update new number's left / right length
+Using a map to save each number's array length. 
+Note: The most interesting part is d[i - left] = length and d[i + right] = length.
+Very clever, it only update the length value at then end of continuous number. 
 
 # 算法归类
 <a href="../../../DataStructure.md">数据结构</a>
