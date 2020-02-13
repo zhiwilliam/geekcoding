@@ -7,7 +7,7 @@ class Solution:
         d = {}
         ans = 0
         for i in nums:
-            if i not in d:              # i is number from dictionary
+            if i not in d:              # i is number from number list
                 left = d.get(i - 1, 0)  # 0 is default value if not found
                 right = d.get(i + 1, 0)
                 length = left + right + 1
