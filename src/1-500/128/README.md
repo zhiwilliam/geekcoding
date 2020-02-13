@@ -10,7 +10,7 @@ Output: 4<br>
 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
 # 算法口号
-HashMap记录，检查，更新左右长度
+HashMap记录，检查，d[i +- left] = length
 
 # 解题思路
 这题的解法很巧，我估计当场想不出来
