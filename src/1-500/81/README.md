@@ -21,6 +21,19 @@ Yes; in worst-case scenario (i.e., all elements in array are identical), BST wil
 
 --------------------------------
 
+Idea:
+
+Compared to Question 33, the tricky part is the array may contain duplicates. There is no better way than advancing just one position when duplicate is encountered as pivot. Search steps:
+1. Consider bounary cases
+2. Select start point and end point
+3. Find the mid point
+4. Decide whether mid point falls into non-rotated part or rotated part.
+5. Apply normal binary search logic on either non-rotated part or rotated part
+6. In case duplicate is encountered, advance start point one spot.
+
+
+--------------------------------
+
 Runtime: 0 ms, faster than 100.00% of Java online submissions for Search in Rotated Sorted Array II.
 Memory Usage: 39.5 MB, less than 52.11% of Java online submissions for Search in Rotated Sorted Array II.
 
