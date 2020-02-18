@@ -6,3 +6,4 @@
 
 这道题
 <a href="src/1-500/131">Palindrome Partitioning (Hard)</a>并不是经典的dp题，可以用backtrack做。但dp也可以做。我采用了dp算法<br>
+<a href="src/1-500/132">Palindrome Partitioning II (Hard)</a><br>

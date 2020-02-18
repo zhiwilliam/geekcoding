@@ -1,5 +1,7 @@
 from typing import List
 
+from typing import List
+
 
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
@@ -14,7 +16,10 @@ class Solution:
                     apal = s[i:j + 1]
                     for lst in rst[i]:
                         rst[j + 1].append(lst + [apal])
-        return rst
+        return rst[-1]
+
 
 solution = Solution()
 print(solution.partition("aab"))
+
+
