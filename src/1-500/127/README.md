@@ -32,6 +32,9 @@ Output: 0
 
 Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 
+# 级别 
+Hard
+
 # 算法口号
 宽度优先，队列记录层数
 

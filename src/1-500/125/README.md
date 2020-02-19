@@ -12,6 +12,9 @@ Example 2:
 Input: "race a car"
 Output: false
 
+# 级别 
+Easy
+
 # 算法口号
 注意字符串的操作
 
