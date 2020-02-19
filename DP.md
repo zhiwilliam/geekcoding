@@ -8,3 +8,4 @@
 <a href="src/1-500/131">Palindrome Partitioning (Hard)</a>并不是经典的dp题，可以用backtrack做。但dp也可以做。我采用了dp算法<br>
 <a href="src/1-500/132">Palindrome Partitioning II (Hard)</a><br>
 <a href="src/1-500/135">Candy (Hard)</a> 本题可以归为多个波峰波谷题<br>
+<a href="src/1-500/139">Word Break (Medium)</a> 本题可以归为多个波峰波谷题<br>
