@@ -1,36 +1,32 @@
 # 题目
-Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Determine if you are able to reach the last index.
 
 Example 1:
 
-Input:
-[
- [ 1, 2, 3 ],
- [ 4, 5, 6 ],
- [ 7, 8, 9 ]
-]
-Output: [1,2,3,6,9,8,7,4,5]
+Input: [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 Example 2:
 
-Input:
-[
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9,10,11,12]
-]
-Output: [1,2,3,4,8,12,11,10,9,5,6,7]
-
+Input: [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum
+             jump length is 0, which makes it impossible to reach the last index.
+             
 # 级别 
 Medium
 
 # 算法口号
-旋转数组：
-使用方向数组，四边界状态机处理
+贪心算法，在每一个数组元素上取索引+值与前面跳法中最大者。
 
 # 解题思路
-这道题初看上去很无厘头，不过仔细看了解法之后，发现还是一道不错的题目。<br>
-重点有两个。一个是用方向数组统一了每一步移动的处理方法。另一个是用状态机来处理边界的不断缩小。
-最后是用长度来确定什么时候结束循环
+这个题的贪心方法是，我们使用一个变量reach保存当前能到达的最后位置索引，那么在每个位置的时候判断这个位置能不能到达，即位置的索引大于了reach说明前面无论怎么走也走不到这个位置，就返回False好了。如果这个位置可以到达，那么要维护一下这个reach，更新策略是当前位置索引+这个数字代表的能向右走多少步，这个代表了到达当前位置的时候向右能到达的最远距离，在这个最远距离以内的任何位置都能到，因为每次跳的步数可以变小的。那么进行了这么一次循环以后，每个位置都判断为能到达，所以结果返回True就好了。
+
+时间复杂度是O(N)，空间复杂度是O(1).
 
 # 算法归类
-<a href="../../../FSM.md">状态机</a>
+<a href="../../../Greedy.md"></a>
