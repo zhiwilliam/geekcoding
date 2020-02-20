@@ -29,4 +29,4 @@ Medium
 时间复杂度是O(N)，空间复杂度是O(1).
 
 # 算法归类
-<a href="../../../Greedy.md"></a>
+<a href="../../../Greedy.md">贪心算法</a>
