@@ -8,18 +8,18 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
         res = []
         def helper(node: TreeNode, res: List[int]):
             if not node: return;
-            res.append(node.val)
-            helper(node.left, res)
             helper(node.right, res)
+            helper(node.left, res)
+            res.append(node.val)
         helper(root, res)
         return res
 
     # 用压栈的方式求解
-    def preorderTraversal2(self, root: TreeNode) -> List[int]:
+    def postorderTraversal2(self, root: TreeNode) -> List[int]:
         if root == None:
             return []
         stack = []
@@ -29,9 +29,9 @@ class Solution:
             temp = stack.pop()
             if temp:
                 res.append(temp.val)
-                stack.append(temp.right)
                 stack.append(temp.left)
-        return res
+                stack.append(temp.right)
+        return res[::-1]
 
 def helper(input: List, i: int) -> TreeNode:
     if i < len(input) and input[i] is not None:
@@ -43,4 +43,4 @@ def helper(input: List, i: int) -> TreeNode:
         return None
 
 solution = Solution()
-print(solution.preorderTraversal2(helper([1,None,2, None, None, 3], 0)))
+print(solution.postorderTraversal2(helper([1,None,2, None, None, 3], 0)))
