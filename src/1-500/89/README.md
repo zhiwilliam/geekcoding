@@ -1,30 +1,46 @@
 # 题目
-Given an array of non-negative integers, you are initially positioned at the first index of the array.
+The gray code is a binary numeral system where two successive values differ in only one bit.
 
-Each element in the array represents your maximum jump length at that position.
-
-Determine if you are able to reach the last index.
+Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.
 
 Example 1:
 
-Input: [2,3,1,1,4]
-Output: true
-Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+Input: 2
+Output: [0,1,3,2]
+Explanation:
+00 - 0
+01 - 1
+11 - 3
+10 - 2
+
+For a given n, a gray code sequence may not be uniquely defined.
+For example, [0,2,3,1] is also a valid gray code sequence.
+
+00 - 0
+10 - 2
+11 - 3
+01 - 1
 Example 2:
 
-Input: [3,2,1,0,4]
-Output: false
-Explanation: You will always arrive at index 3 no matter what. Its maximum
-             jump length is 0, which makes it impossible to reach the last index.
+Input: 0
+Output: [0]
+Explanation: We define the gray code sequence to begin with 0.
+             A gray code sequence of n has size = 2n, which for n = 0 the size is 20 = 1.
+             Therefore, for n = 0 the gray code sequence is [0].
              
 # 级别 
 Medium
 
 # 算法口号
-贪心算法，在每一个数组元素上取索引+值与前面跳法中最大者。
+
 
 # 解题思路
-
+这题没有太多的想法，就是一个数学加密，建议死记规律，下面这个是WIKI上找到的规律
+From WIKI how binary transfer to GRAY CODE
+    #   unsigned int BinaryToGray(unsigned int num)
+    #       {
+    #           return num ^ (num >> 1);
+    #       }
 
 # 算法归类
-<a href="../../../Greedy.md"></a>
+<a href="../../../DataStructure.md"></a>
