@@ -27,6 +27,9 @@ Output: [0]
 Explanation: We define the gray code sequence to begin with 0.
              A gray code sequence of n has size = 2n, which for n = 0 the size is 20 = 1.
              Therefore, for n = 0 the gray code sequence is [0].
+             
+# 级别 
+Medium
 
 # 算法口号
 
