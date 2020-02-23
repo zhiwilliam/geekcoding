@@ -1,0 +1,4 @@
+.vscode
+.idea
+*.iml
+*.__pycache__
