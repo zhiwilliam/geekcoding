@@ -3,6 +3,9 @@
 #
 # [200] Number of Islands
 #
+# 1) Depth first search
+# 2) Use generator to avoid stack overflow.
+# 3) Coordinate for fast locale.
 
 # @lc code=start
 
