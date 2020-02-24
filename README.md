@@ -11,3 +11,5 @@
 <p><a href="DualPointer.md">双指针</a></p>
 <p><a href="DataStructure.md">数据结构</a></p>
 <p><a href="DP.md">动态规划</a></p>
+<p><a href="FSM.md">状态机</a></p>
+<p><a href="TE.md">一些特殊题目</a></p>
