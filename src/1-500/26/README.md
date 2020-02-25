@@ -19,7 +19,7 @@ Your function should return length = 5, with the first five elements of nums bei
 
 It doesn't matter what values are set beyond the returned length.
 
-#解题思路
+# 解题思路
 
 首先用最容易想到的暴力法：
 
