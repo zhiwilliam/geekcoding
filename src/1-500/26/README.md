@@ -23,11 +23,11 @@ It doesn't matter what values are set beyond the returned length.
 
 首先用最容易想到的暴力法：
 
-Employe two pointers:
-  nextIndex denotes the next unique index, will increase when any unique value found
-  currIndex denotes the current index, which will traversal the who input array 
+Employe nextIndex denotes the next unique location, will increase when any unique value found
+Then traversal the who input array to remove duplications. 
 
 O(1) extra memory for variable prevValue, as condition of duplication detection.
+
 
 
 
