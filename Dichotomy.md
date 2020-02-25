@@ -6,3 +6,5 @@
         while start <= end:
             mid = (start + end) // 2
 ```
+
+<a href="src/1-500/33">Search in Rotated Sorted Array (Medium)</a><br>
