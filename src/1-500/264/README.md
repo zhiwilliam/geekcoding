@@ -47,3 +47,7 @@ class Solution:
                 i5 += 1
         return ugly[-1]
 ```
+
+## Complexity
+* Time complexity: O(n)
+* Space complexity: O(n)
