@@ -51,6 +51,7 @@ The length of the array is 3, and the 3 distinct numbers are taken from the firs
 |index|0|1|2|
 |:----|:----:|:----:|:----:|
 |value|3|0|1|
+
 The equation is:
 ```Python
 result = 3 ^ (0^3)^(1^0)^(2^1)
