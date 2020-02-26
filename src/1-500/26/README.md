@@ -23,7 +23,8 @@ It doesn't matter what values are set beyond the returned length.
 
 首先用最容易想到的暴力法：
 
-Employe nextIndex denotes the next unique location, will increase when any unique value found
+Employe nextIndex denotes the next unique location, will increase when any unique value found;
+
 Then traversal the who input array to remove duplications. 
 
 O(1) extra memory for variable prevValue, as condition of duplication detection.
