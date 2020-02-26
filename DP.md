@@ -8,6 +8,7 @@
 2.动态规划的关键是状态转移方程，即如何由以求出的局部最优解来推导全局最优解；<br>
 3.边界条件：即最简单的，可以直接得出的局部最优解。<br>
 
+<a href="src/1-500/44">Wildcard Matching (Hard)</a><br>
 这道题
 <a href="src/1-500/131">Palindrome Partitioning (Hard)</a>并不是经典的dp题，可以用backtrack做。但dp也可以做。我采用了dp算法<br>
 <a href="src/1-500/132">Palindrome Partitioning II (Hard)</a><br>
