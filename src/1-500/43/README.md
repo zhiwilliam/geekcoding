@@ -38,7 +38,7 @@ res = [0] * (len(num1) + len(num2))
 ```
 ''.join(map(str, res[st:]))
 ```
-最后这句清零非常有意思。我还没怎么看懂，请大佬指教
+最后这句从list转换成string非常有意思。我还没怎么看懂，请大佬指教
 
 # 算法归类
 <a href="../../../DataStructure.md">数组结构</a>
