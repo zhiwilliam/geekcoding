@@ -10,3 +10,4 @@
 <a href="src/1-500/128">Longest Consecutive Sequence (hard)</a>  <br>
 <a href="src/1-500/143">Reorder List (Medium)</a>  <br>
 <a href="src/1-500/143">Sort List (Medium)</a>  <br>
+<a href="src/1-500/217">Contains Duplicate (Easy)</a>  <br>
