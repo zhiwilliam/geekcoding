@@ -8,4 +8,5 @@
 2.由（1）中的介绍，可以知道贪心法正确的条件是：每一步的最优解一定包含上一步的最优解。
 
 
+<a href="src/1-500/45">Jump Game II (Hard)</a><br>
 <a href="src/1-500/55">Jump Game (Medium)</a><br>
