@@ -12,10 +12,7 @@ class Solution {
         if (s == null || s.length() == 0) {
             return null;
         }
-        int val = 0;
-        boolean neg = false;
         Stack<TreeNode> stack = new Stack<>();
-        int index = 0;
         for(int i = 0, j = i; i < s.length(); i++, j = i){
             char c = s.charAt(i);
             if(c == ')'){
