@@ -29,5 +29,4 @@ class Solution {
         return res.length == numCourses ? res : new int[0];
     }
 
-
 }
