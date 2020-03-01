@@ -1,35 +1,46 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * Definition for a binary tree node. public class TreeNode { int val; TreeNode
  * left; TreeNode right; TreeNode(int x) { val = x; } }
  */
 class Solution {
-    public List<Integer> rightSideView(TreeNode root) {
-        if (root == null)
-            return new ArrayList<>();
 
-        Queue<TreeNode> queue = new ArrayDeque<>();
-        List<Integer> list = new ArrayList<>();
+  public List<Integer> rightSideView(TreeNode root) {
+    if (root == null) return new ArrayList<>();
 
-        queue.add(root);
+    Queue<TreeNode> queue = new ArrayDeque<>();
+    List<Integer> list = new ArrayList<>();
 
-        while (!queue.isEmpty()) {
-            int size = queue.size();
+    queue.add(root);
 
-            for (int i = 0; i < size; i++) {
+    while (!queue.isEmpty()) {
+      int size = queue.size();
 
-                TreeNode tem = queue.poll();
+      for (int i = 0; i < size; i++) {
+        TreeNode tem = queue.poll();
 
-                if (i == size - 1)
-                    list.add(tem.val);
+        if (i == size - 1) list.add(tem.val);
 
-                if (tem.left != null)
-                    queue.offer(tem.left);
+        if (tem.left != null) queue.offer(tem.left);
 
-                if (tem.right != null)
-                    queue.offer(tem.right);
-            }
-        }
-
-        return list;
+        if (tem.right != null) queue.offer(tem.right);
+      }
     }
+
+    return list;
+  }
+
+  public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+      val = x;
+    }
+  }
 }
