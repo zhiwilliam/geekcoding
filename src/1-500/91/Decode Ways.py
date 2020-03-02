@@ -1,31 +1,19 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution:
-    def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
-        if m == n:
-            return head
-
-        dummyNode = ListNode(0)
-        dummyNode.next = head
-        pre = dummyNode
-
-        for i in range(m - 1):
-            pre = pre.next
-
-        # reverse the [m, n] nodes
-        reverse = None
-        cur = pre.next
-        for i in range(n - m + 1):
-            next = cur.next
-            cur.next = reverse
-            reverse = cur
-            cur = next
-
-        pre.next.next = cur
-        pre.next = reverse
-
-        return dummyNode.next
+    def numDecodings(self, s: str) -> int:
+        if s == "" or s[0] == 0:
+            return 0
+        n = len(s)
+        dp = [0 for i in range(n)]
+        if s[0] != '0':
+            dp[0] = 1
+        for i in range(1, n):
+            x = int(s[i])
+            y = int(s[i - 1:i + 1])
+            if 1 <= x <= 9:
+                dp[i] += dp[i - 1]
+            if 10 <= y <= 26:
+                if i - 2 >= 0:
+                    dp[i] += dp[i - 2]
+                else:
+                    dp[i] += 1
+        return dp[-1]
