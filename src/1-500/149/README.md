@@ -41,3 +41,14 @@ put the two number into dict, add 1 if already exists.
 Return the max value of the dictionary.
 
 
+ATTENTION:
+We could not use gradiance directly due to floating round-off error.
+Otherwise, it will pass the sample in description, but fail on the following test case:
+
+[[0,0],[94911151,94911150],[94911152,94911151]]
+
+The two points are not line up with (0,0) exactly, but very close.
+
+Instead of, we use two integers denote the slope. The trick is, we need divided them by their GCD, so that we have unique key for same slope. 
+
+
