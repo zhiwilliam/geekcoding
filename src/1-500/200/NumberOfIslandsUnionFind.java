@@ -57,7 +57,7 @@ class UnionFind {
         }
     }
 
-    public int find(int node) {
+    public int find(int node) { //path compression
         if (father[node] == node) {
             return node;
         }
