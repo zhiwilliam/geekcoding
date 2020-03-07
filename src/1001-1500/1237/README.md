@@ -1,4 +1,6 @@
-Given a function  f(x, y) and a value z, return all positive integer pairs x and y where f(x,y) == z.
+# 题目
+
+## Given a function  f(x, y) and a value z, return all positive integer pairs x and y where f(x,y) == z.
 
 The function is constantly increasing, i.e.:
 
@@ -35,3 +37,16 @@ Constraints:
 1 <= z <= 100
 It's guaranteed that the solutions of f(x, y) == z will be on the range 1 <= x, y <= 1000
 It's also guaranteed that f(x, y) will fit in 32 bit signed integer if 1 <= x, y <= 1000
+
+
+# 级别 
+Easy 
+
+# 解题思路
+Rephrase the problem:
+Given a matrix, each row and each column is increasing.
+Find all coordinates (i,j) that A[i][j] == z
+
+# 算法归类
+Math
+

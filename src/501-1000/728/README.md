@@ -1,3 +1,7 @@
+# 题目 
+
+## Self Dividing Numbers
+
 A self-dividing number is a number that is divisible by every digit it contains.
 
 For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
@@ -13,3 +17,16 @@ Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
 Note:
 
 The boundaries of each input argument are 1 <= left <= right <= 10000.
+
+# 级别 
+Easy
+
+# 解题思路
+
+首先找出这个range以内的所有数字。
+然后将这个数字转换成str,取出各个数字，再依次检测是否能够整除。
+
+
+# 算法归类
+
+Math

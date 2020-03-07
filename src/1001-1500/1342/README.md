@@ -1,7 +1,10 @@
-Given a non-negative integer num, return the number of steps to reduce it to zero.
-If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+# 题目
 
+## 1342. Number of Steps to Reduce a Number to Zero
 
+Given a non-negative integer num, return the number of steps to reduce it to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract 1 from it.
+
+ 
 
 Example 1:
 
@@ -27,3 +30,35 @@ Example 3:
 
 Input: num = 123
 Output: 12
+ 
+
+Constraints:
+
+0 <= num <= 10^6
+
+
+# 级别 
+Easy
+
+
+
+# 解题思路
+
+
+If odd, then -1 is to calculate the number of '1' in binary.
+If even, then /2 is to calculate the length of binary.
+
+class Solution:
+
+    def numberOfSteps (self, num: int) -> int:
+    
+        bin_str = bin(num)[2:]
+        
+        return len(bin_str) -1 + bin_str.count('1')
+        
+因为此处我们没有-2，所以总共就是-3.        
+        
+
+# 算法归类
+math
+
