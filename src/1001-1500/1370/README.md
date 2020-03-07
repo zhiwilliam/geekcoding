@@ -1,31 +1,80 @@
-# 题目
-## Increasing Decreasing String
+# 1370. Increasing Decreasing String
+
 Given a string s. You should re-order the string using the following algorithm:
 
-Pick the smallest character from s and append it to the result.
-Pick the smallest character from s which is greater than the last appended character to the result and append it.
-Repeat step 2 until you cannot pick more characters.
-Pick the largest character from s and append it to the result.
-Pick the largest character from s which is smaller than the last appended character to the result and append it.
-Repeat step 5 until you cannot pick more characters.
-Repeat the steps from 1 to 6 until you pick all characters from s.
+1. Pick the smallest character from s and append it to the result.
+2. Pick the smallest character from s which is greater than the last appended character to the result and append it.
+3. Repeat step 2 until you cannot pick more characters.
+4. Pick the largest character from s and append it to the result.
+5. Pick the largest character from s which is smaller than the last appended character to the result and append it.
+6. Repeat step 5 until you cannot pick more characters.
+7. Repeat the steps from 1 to 6 until you pick all characters from s.
 In each step, If the smallest or the largest character appears more than once you can choose any occurrence and append it to the result.
 
 Return the result string after sorting s with this algorithm.
 
-# 题目简介
-其实就是一个字符串里出现的所有字符先从小往大打印，再从大往小打印。
+```python
+Example 1:
 
-# 级别 
-Easy
+Input: s = "aaaabbbbcccc"
+Output: "abccbaabccba"
+Explanation: After steps 1, 2 and 3 of the first iteration, result = "abc"
+After steps 4, 5 and 6 of the first iteration, result = "abccba"
+First iteration is done. Now s = "aabbcc" and we go back to step 1
+After steps 1, 2 and 3 of the second iteration, result = "abccbaabc"
+After steps 4, 5 and 6 of the second iteration, result = "abccbaabccba"
+Example 2:
 
-# 算法口号
-数组存所有字符出现的次数，然后从左往右，从右往左扫描数组
+Input: s = "rat"
+Output: "art"
+Explanation: The word "rat" becomes "art" after re-ordering it with the mentioned algorithm.
+Example 3:
 
-# 解题思路
-这道题是典型的字符串操作题。它利用了英文字母只有26个的特性。
+Input: s = "leetcode"
+Output: "cdelotee"
+Example 4:
 
-先开一个26个空格的数组，代表了英文26个字母的现后顺序。
-然后扫描输入的字符串，出现的每一个字符，都通过减去a的ascii码转换成数组的index。把相应位置的数字加1
-全部扫完后，我们就知道每一个字符出现的次数了。然后从左往右扫描存储数组，只要index大于0就把值加到返回数组中
-。再从右往左扫，以此类推，知道所有字符都加到了返回字符串，最后返回生成的新字符串。
+Input: s = "ggggggg"
+Output: "ggggggg"
+Example 5:
+
+Input: s = "spo"
+Output: "ops"
+Constraints:
+
+1 <= s.length <= 500
+s contains only lower-case English letters.
+```
+
+# Analysis
+Maintain a char count array, scan back and forth until all the character used up
+# Source Code
+
+```java
+class Solution {
+    public String sortString(String s) {
+        if (s == null || s.length() == 0) {
+            return s;
+        }
+        int[] count = new int[26];
+        for (char c : s.toCharArray()) {
+            count[c - 'a']++;
+        }
+        StringBuilder ans = new StringBuilder();
+        int len = count.length;
+        while(ans.length() < s.length()) {
+            for (int i = 0; i < len; i++) {
+                if (count[i]-- > 0) {
+                    ans.append((char)('a' + i));
+                }
+            }
+            for (int i = len - 1; i >= 0; i--) {
+                if (count[i]-- > 0) {
+                    ans.append((char)('a' + i));
+                }
+            }
+        }
+        return ans.toString();
+    }
+}
+```
