@@ -15,8 +15,8 @@ class Solution:
         return min(max(-2147483648, res), 2147483647)
 
 if __name__ == '__main__':
-  dividend = -2147483648
-  divisor = -1
+  dividend = 8
+  divisor = 4
   S = Solution()
   result = S.divide(dividend, divisor)
   print(result)
