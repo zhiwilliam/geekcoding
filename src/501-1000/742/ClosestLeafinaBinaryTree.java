@@ -1,11 +1,6 @@
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
+ * Definition for a binary tree node. public class TreeNode { int val; TreeNode
+ * left; TreeNode right; TreeNode(int x) { val = x; } }
  */
 class Solution {
 
@@ -52,10 +47,7 @@ class Solution {
     if (root.left != null) {
       nei.add(root.left.val);
       graph.put(root.val, nei);
-      Set<Integer> leftnei = graph.getOrDefault(
-        root.left.val,
-        new HashSet<Integer>()
-      );
+      Set<Integer> leftnei = graph.getOrDefault(root.left.val, new HashSet<Integer>());
       leftnei.add(root.val);
       graph.put(root.left.val, leftnei);
     }
@@ -63,10 +55,7 @@ class Solution {
     if (root.right != null) {
       nei.add(root.right.val);
       graph.put(root.val, nei);
-      Set<Integer> rightnei = graph.getOrDefault(
-        root.right.val,
-        new HashSet<Integer>()
-      );
+      Set<Integer> rightnei = graph.getOrDefault(root.right.val, new HashSet<Integer>());
       rightnei.add(root.val);
       graph.put(root.right.val, rightnei);
     }
