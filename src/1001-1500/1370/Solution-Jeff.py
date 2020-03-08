@@ -1,4 +1,9 @@
 
+# @lc app=leetcode id=1370 lang=python3
+
+# @lc code=start
+
+
 class Solution:
     def sortString(self, s: str) -> str:
         _m = {}
@@ -23,3 +28,5 @@ class Solution:
 
 if __name__ == '__main__':
     print(Solution().sortString('aaaabbbbcccc'))
+
+# @lc code=end
