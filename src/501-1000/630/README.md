@@ -51,3 +51,7 @@ class Solution:
                 cur += heapq.heappop(que)
         return len(que)
 ```
+
+## 复杂度：
+* 时间复杂度：***O(nlogn)***
+* 空间复杂度： ***O(n)***
