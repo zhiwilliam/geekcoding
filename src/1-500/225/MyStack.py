@@ -43,7 +43,7 @@ class MyStackQueue:
         return self.q.empty()
 
 
-# Slightly faster solution is top() is used frequently
+# Slightly faster solution if top() is used frequently
 from queue import Queue
 class MyStackQueueWithTop:
 
