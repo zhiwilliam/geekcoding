@@ -1,0 +1,81 @@
+class Solution {
+public:
+    ListNode* removeZeroSumSublists(ListNode* head) {
+        vector<int> temp;
+        ListNode* cur = head;
+        int len = 0;
+        while(cur)
+        {
+            temp.push_back(cur->val);
+            len++;
+            cur = cur->next;
+        }
+        
+        if(len == 0) return NULL;
+        
+        bool ischange = false;
+        for(int i = 0; i < len; i++)
+        {
+            int sum = 0;
+            int num = -1;
+            for(int j = i; j < len; j++)
+            {
+                sum += temp[j];
+                if(sum == 0) 
+                {
+                    num = j;
+                    break;
+                }
+            }
+            
+            if(num != -1)
+            {
+                head = removeSublists(head, i, num, len);
+                ischange = true;
+                break;
+            }
+            
+        }
+        
+        if(ischange) return removeZeroSumSublists(head);
+        else return head;
+        
+    }
+private:
+    ListNode* removeSublists(ListNode* head, int a, int b, int len){
+        ListNode* temp = head;
+        if(a == 0)
+        {
+            for(int i = 0; i < len; i++)
+            {
+                head = head->next;
+                if(i == b) return head;
+            }
+        }
+        else if(b == len - 1)
+        {
+            for(int i = 0; i < len; i++)
+            {
+                if(i == a-1)
+                {
+                    temp->next = NULL;
+                    return head;
+                }
+                temp = temp->next;
+            }
+        }
+        
+        ListNode* temp_1;
+        ListNode* temp_2;
+
+        for(int i = 0; i < len; i++)
+        {
+            if(i == a-1) temp_1 = temp;
+            else if(i == b+1) temp_2 = temp;
+            temp = temp->next;
+        }
+        temp_1->next = temp_2;
+        
+        return head;
+    }
+};
