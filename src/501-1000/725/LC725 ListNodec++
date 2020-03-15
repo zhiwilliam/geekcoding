@@ -1,0 +1,67 @@
+class Solution {
+public:
+    vector<ListNode*> splitListToParts(ListNode* root, int k) {
+        ListNode* temp = root;
+        int len = 0;
+        while(temp)
+        {
+            len++;
+            temp = temp->next;
+        }  
+        
+        int max_length = (len % k == 0) ? (len/k) : ((len/k)+1);
+        
+        temp = root;
+        
+        vector<ListNode*> sol;
+        int len_vec = 0;
+        
+        while(temp || k)
+        {
+            /*if(k != 0 && !temp)
+            {
+                ListNode* a = NULL;
+                sol.push_back(a);
+            }*/
+            ListNode* temp_1;
+            if(len % k == 0)
+            {
+                temp_1 = temp;
+                for(int i = 0; i < (len/k); i++)
+                {
+                    if(i == (len/k) - 1)
+                    {
+                        ListNode* temp_2 = temp->next;
+                        temp->next = NULL;
+                        temp = temp_2;
+                        break;
+                    }
+                    temp = temp->next;
+                }
+                sol.push_back(temp_1);
+                len -= len/k;
+            }
+            else
+            {
+                temp_1 = temp;
+                for(int i = 0; i < (len/k)+1; i++)
+                {
+                    if(i == (len/k))
+                    {
+                        ListNode* temp_2 = temp->next;
+                        temp->next = NULL;
+                        temp = temp_2;
+                        break;
+                    }
+                    temp = temp->next;
+                }
+                sol.push_back(temp_1);
+                len -= (len/k)+1;
+            }
+            
+            k--;
+            
+        }
+        return sol;
+    }
+};
