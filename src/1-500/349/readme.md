@@ -25,7 +25,7 @@ Since we don't care about repetitions, we can use set() to get rid of duplicates
 
 Then we can use intersection() to determine the intersection of both sets, which has an average time complexity of O(min(m, n)) with a worst case of O(m*n), and a space complexity of O(m+n).
 
-If we must solve the problem without using any built-in functions, we can always use bucket sort to count the number of letters in each list (there's no need to count above 1, actually). Then we output a list containing values where the count is greater than 0 in both results of the bucket sorts. This should be O(m+n) time and space.
+If we must solve the problem without using any built-in functions, we can always use a Counter to count the appearances of each letter in each list (there's no need to count above 1, actually). Then we output a list containing values where the count is greater than 0 in both Counters. This should be O(m+n) time and space.
 
 Time Complexity: O(m+n) (worst case O(m*n))
 Space Complexity: O(m+n)
