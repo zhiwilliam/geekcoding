@@ -34,8 +34,6 @@ Note:
 # 级别 
 Easy
 
-\
-
 # 解题思路
 
 For a >= b >= c, a,b,c can form a triangle if a < b + c.
