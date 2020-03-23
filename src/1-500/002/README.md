@@ -17,3 +17,9 @@ Output: 7 -> 0 -> 8
 
 # 算法归类
 <a href="../../../DataStructure.md">线性表-链表</a>
+
+# Appendix by jingdaz
+1. Add a Java solution which may seem easier to understand
+2. Result: 
+Runtime: 1 ms, faster than 100.00% of Java online submissions for Add Two Numbers.
+Memory Usage: 41.4 MB, less than 91.22% of Java online submissions for Add Two Numbers.
