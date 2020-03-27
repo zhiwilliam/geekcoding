@@ -20,3 +20,11 @@ The median is (2 + 3)/2 = 2.5
 
 算法归类
 Binary search
+
+Appendix by jingdaz:
+1. Apply binary search to find 4 mdian elements within merged array. The detailed explanation can be found from link:
+https://www.youtube.com/watch?time_continue=1389&v=LPFhl65R7ww&feature=emb_title
+
+2. Java runtime result: 
+Runtime: 2 ms, faster than 99.81% of Java online submissions for Median of Two Sorted Arrays.
+Memory Usage: 41.9 MB, less than 99.31% of Java online submissions for Median of Two Sorted Arrays.
