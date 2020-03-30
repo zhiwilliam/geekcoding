@@ -14,3 +14,10 @@ Input: 120
 Output: 21
 Note:
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+----------------------------
+Appendix by jingdaz:
+1. Added Java implementation
+
+2. Runtime: 1 ms, faster than 100.00% of Java online submissions for Reverse Integer.
+Memory Usage: 36.6 MB, less than 5.55% of Java online submissions for Reverse Integer.
