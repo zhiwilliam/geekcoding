@@ -8,7 +8,7 @@ class ListNode:
         self.next = None
 
     def __lt__(self, other):
-        return self.val < other.val
+        return self.val <= other.val
 
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
@@ -33,10 +33,11 @@ def mkList(list: List[int])->ListNode:
     root = ListNode(0)
     node = root
     for i in list:
-        node.next = ListNode(0)
+        node.next = ListNode(i)
         node = node.next
     return root.next
 solution = Solution()
 node = solution.mergeKLists([mkList([1, 4, 5]), mkList([1, 3, 4]), mkList([2, 6])])
 while node:
     print(node.val, end=' ')
+    node = node.next
