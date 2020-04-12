@@ -143,3 +143,10 @@ class Solution:
 
 执行用时 :40 ms,   在所有 Python3 提交中击败了69.60%的用户
 内存消耗 :13.7 MB, 在所有 Python3 提交中击败了 5.38%的用户
+
+----------------------------
+Appendix by jingdaz:
+1. Added Java implementation
+
+2. Runtime: 1 ms, faster than 100.00% of Java online submissions for String to Integer (atoi).
+Memory Usage: 39.3 MB, less than 5.59% of Java online submissions for String to Integer (atoi).
