@@ -22,3 +22,17 @@ P     I    N
 A   L S  I G
 Y A   H R
 P     I
+
+# Appendix by jingdaz
+1. Add a Java solution with approach: Visit by Row
+2. Idea: 
+Visit the characters in the same order as reading the Zig-Zag pattern line by line.
+
+For integer k [0, len),
+
+Characters in row 0 are located at indexes k*(2*numRows-2);
+Characters in row numRows−1 are located at indexes k*(2⋅numRows−2)+numRows−1;
+Characters in inner row i are located at indexes k*(2*numRows−2)+i and (k+1)(2*numRows−2)−i.
+3. Result: 
+Runtime: 2 ms, faster than 99.96% of Java online submissions for ZigZag Conversion.
+Memory Usage: 39.4 MB, less than 68.09% of Java online submissions for ZigZag Conversion.
