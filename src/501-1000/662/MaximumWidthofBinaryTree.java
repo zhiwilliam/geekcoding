@@ -7,6 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
 class Solution {
     int length;
     public int widthOfBinaryTree(TreeNode root) {
